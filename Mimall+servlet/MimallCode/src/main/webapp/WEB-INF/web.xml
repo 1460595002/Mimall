@@ -1,0 +1,119 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <filter>
+    <filter-name>BackServletFilter</filter-name>
+    <filter-class>cn.jinronga.filter.BackServletFilter</filter-class>
+  </filter>
+
+<!--  访问路劲-->
+  <filter-mapping>
+    <filter-name>BackServletFilter</filter-name>
+<!--    所有请求都会经过这里-->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <filter>
+    <filter-name>ForeServletFilter</filter-name>
+    <filter-class>cn.jinronga.filter.ForeServletFilter</filter-class>
+  </filter>
+
+  <!--  访问路劲-->
+  <filter-mapping>
+    <filter-name>ForeServletFilter</filter-name>
+    <!--    所有请求都会经过这里-->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>ForeAuthFilter</filter-name>
+    <filter-class>cn.jinronga.filter.ForeAuthFilter</filter-class>
+  </filter>
+
+  <!--  访问路劲-->
+  <filter-mapping>
+    <filter-name>ForeAuthFilter</filter-name>
+    <!--    所有请求都会经过这里-->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+<!--  category分类-->
+  <servlet>
+    <servlet-name>CategoryServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.CategoryServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>CategoryServlet</servlet-name>
+    <url-pattern>/categoryServlet</url-pattern>
+  </servlet-mapping>
+  
+<!--  详细信息-->
+  <servlet>
+  <servlet-name>PropertyServlet</servlet-name>
+  <servlet-class>cn.jinronga.servlet.PropertyServlet</servlet-class>
+</servlet>
+
+  <servlet-mapping>
+    <servlet-name>PropertyServlet</servlet-name>
+    <url-pattern>/propertyServlet</url-pattern>
+  </servlet-mapping>
+
+<!--  产品信息-->
+<servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.ProductServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/productServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ProductImageServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.ProductImageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ProductImageServlet</servlet-name>
+    <url-pattern>/productImageServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.UserServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/userServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.OrderServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/orderServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ForeServlet</servlet-name>
+    <servlet-class>cn.jinronga.servlet.ForeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ForeServlet</servlet-name>
+    <url-pattern>/foreServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
